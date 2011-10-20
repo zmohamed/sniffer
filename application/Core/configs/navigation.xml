@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <core>
+        <index>
+            <label>menu_home</label>
+            <order>-100</order>
+            <route>index</route>
+            <id>homeLink</id>
+        </index>
+        <login>
+            <label>menu_login</label>
+            <route>login</route>
+            <id>loginLink</id>
+            <visible>0</visible>
+        </login>
+    </core>
+</config>

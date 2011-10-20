@@ -1,0 +1,52 @@
+<?php 
+
+$fieldDecorator = array( 'ViewHelper', 
+						 'Description',
+						 'Errors',
+						 array('Label',array('class' => 'label1')),
+						 array(array('row' =>'HtmlTag'), 
+							   array('tag' =>'p')
+							  )
+						);
+				
+$buttonDecorator = array( 'ViewHelper', 
+						 array(array('row' =>'HtmlTag'), 
+							   array('tag' =>'p')
+							  )
+						);
+
+$this->loginForm->username->setLabel('login_form_username_label')
+						  ->setDecorators($fieldDecorator)
+						  ->setAttrib('class', 'formField');
+						  //->setDescription('login_form_username_desc');
+
+$this->loginForm->password->setLabel('login_form_password_label')
+						  ->setDecorators($fieldDecorator)
+						  ->setAttrib('class', 'formField');
+						  //->setDescription('login_form_password_desc');
+
+$this->loginForm->submit->setLabel('login_form_submit_label')
+					    ->setDecorators($buttonDecorator);
+
+$this->loginForm->clearDecorators()
+				->setDecorators(array(
+								    'FormElements',
+									'Form',
+								))
+				->setAttrib('class', 'form')
+				->setAction($this->url(array(), 'login'));
+				
+if($this->message != '') {
+	echo '<p class="error-message">' . $this->message . '</p>';
+}
+echo $this->loginForm;
+
+
+
+
+
+
+
+
+
+

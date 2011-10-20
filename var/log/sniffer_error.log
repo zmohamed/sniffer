@@ -1,0 +1,16 @@
+2011-10-18T12:09:50+02:00 NOTICE (5): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (zeze)' in /usr/local/zend/share/ZendFramework-1.11.10-minimal/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /usr/local/zend/share/ZendFramework-1.11.10-minimal/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /usr/local/zend/share/ZendFramework-1.11.10-minimal/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#2 /usr/local/zend/share/ZendFramework-1.11.10-minimal/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 /var/www/sniffer/public/index.php(31): Zend_Application->run()
+#4 {main}
+2011-10-18T12:09:50+02:00 NOTICE (5): array
+2011-10-18T12:10:29+02:00 NOTICE (5): exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (zeze)' in /usr/local/zend/share/ZendFramework-1.11.10-minimal/library/Zend/Controller/Dispatcher/Standard.php:248
+Stack trace:
+#0 /usr/local/zend/share/ZendFramework-1.11.10-minimal/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 /usr/local/zend/share/ZendFramework-1.11.10-minimal/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#2 /usr/local/zend/share/ZendFramework-1.11.10-minimal/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#3 /var/www/sniffer/public/index.php(31): Zend_Application->run()
+#4 {main}
+2011-10-18T12:10:29+02:00 NOTICE (5): array

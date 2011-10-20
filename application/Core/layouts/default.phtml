@@ -1,0 +1,57 @@
+<?php echo $this->doctype() . PHP_EOL?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<?php 
+echo $this->headTitle() . PHP_EOL;
+echo $this->headMeta() . PHP_EOL;
+echo $this->headLink() . PHP_EOL;
+echo $this->headScript() . PHP_EOL; 
+?>
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
+</head>
+<body>
+
+<div id="wrapper">
+
+  <!-- start of header -->
+  <div id="header">
+  <!-- start of main menu links -->
+<div id="menu">
+        <?php
+        echo $this->navigation()
+            ->menu(Zend_Registry::get('navigation'))
+            ->setUlClass('mainMenu');
+        ?>
+    </div>
+    <!-- end of main menu links -->
+  </div>
+  <!-- end of header -->
+  
+  <!-- start of page wrapper -->
+  <div id="page">
+  <div id="breadcrumbs" class="doLoading">
+      <a href="<?php echo $this->url(array(), 'index')?>" class="mainBCLink">
+      App Framework</a> / 
+      <?php echo $this->navigation()
+                ->breadcrumbs(Zend_Registry::get('navigation'))
+                ->setSeparator(' / ')
+                ->setRenderInvisible(true)
+                ->setMinDepth(0);
+            ?>
+    </div>
+    <!-- start of content -->
+    <div id="content">
+    <?php echo $this->layout()->content . PHP_EOL?>
+    </div>
+    <!-- end of content -->
+  </div>
+  <!-- end of page wrapper -->
+</div>
+
+<?php
+echo $this->inlineScript() . PHP_EOL;
+?>
+
+</body>
+</html>
